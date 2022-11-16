@@ -36,39 +36,69 @@ return (
     <div>
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">{boomtownObj.name}</h2>
-                <img class="card-img-top" src={boomtownObj.avatar_url} alt="Boomtown's blue logo" style={{ height: 100, width: 100 }}></img>
-                <h6 class="card-subtitle mb-2 text-muted">LOGIN {boomtownObj.login}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">ID {boomtownObj.id}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">LOCATION {boomtownObj.location}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">FOLLOWERS {boomtownObj.followers}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">FOLLOWING {boomtownObj.following}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">PUBLIC REPOS {boomtownObj.public_repos}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">PUBLIC GISTS {boomtownObj.public_gists}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">ORGANIZATION PROJECTS {boomtownObj.has_organization_projects}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">REPOSITORY PROJECTS {boomtownObj.has_repository_projects}</h6>
-                <p class="card-text">NODE ID {boomtownObj.node_id}</p>
-                <div class="card">
-                    <h1>Github API Links</h1>
-                    <p class="card-text">{boomtownObj.url}</p>
-                    <p class="card-text">REPOS: {boomtownObj.repos_url}</p>
-                    <p class="card-text">EVENTS: {boomtownObj.events_url}</p>
-                    <p class="card-text">HOOKS: {boomtownObj.hooks_url}</p>
-                    <p class="card-text">ISSUES: {boomtownObj.issues_url}</p>
-                    <p class="card-text">MEMBERS: {boomtownObj.members_url}</p>
-                    <p class="card-text">PUBLIC MEMBERS: {boomtownObj.public_members_url}</p>
+                <div>
+                    <img class="card-img-top" src={boomtownObj.avatar_url} alt="Boomtown's blue logo" style={{ height: 100, width: 100 }}></img>
+                    
                 </div>
-                <p class="card-text">COMPANY {boomtownObj.company}</p>
-                <p class="card-text">TYPE {boomtownObj.type}</p>
-
-                <p class="card-text">DESCRIPTION {boomtownObj.description}</p>
                 <div class="card">
-                    <h1>Connect with us</h1>
-                    <p class="card-text">Blog: {boomtownObj.blog}</p>
-                    <p class="card-text">Github: {boomtownObj.html_url}</p>
-                    <p class="card-text">Email: {boomtownObj.email}</p>
-                    <p class="card-text">Twitter: {boomtownObj.twitter_username}</p>
-                    <p class="card-text text-muted">Verified: {boomtownObj.is_verified}</p>
+                    <p class="card-text">
+                        <h1 class="card-title">{boomtownObj.name}</h1>
+                        Login: {boomtownObj.login}
+                        <br></br>
+                        Id: {boomtownObj.id}
+                        <br></br>
+                        Location: {boomtownObj.location}
+                        <br></br>
+                        Followers: {boomtownObj.followers}
+                        <br></br>
+                        Following: {boomtownObj.following}
+                        <br></br>
+                        Public Repos: {boomtownObj.public_repos}
+                        <br></br>
+                        Public Gists: {boomtownObj.public_gists}
+                        <br></br>
+                        Organization Projects: {boomtownObj.has_organization_projects}
+                        <br></br>
+                        Repository Projects: {boomtownObj.has_repository_projects}
+                        <br></br>
+                        Node ID: {boomtownObj.node_id}
+                        <br></br>
+                        Company: {boomtownObj.company}
+                        <br></br>
+                        Description: {boomtownObj.description}
+                        <br></br>
+                        Type: {boomtownObj.type}
+                    </p>
+                    {/* above is problem, data not showing */}
+                </div>
+                <div class="card">
+                    <h3>Github API Links</h3>
+                    <p class="card-text">{boomtownObj.url}
+                    <br></br> 
+                    REPOS: {boomtownObj.repos_url}
+                    <br></br>
+                    EVENTS: {boomtownObj.events_url}
+                    <br></br>
+                    HOOKS: {boomtownObj.hooks_url}
+                    <br></br>
+                    ISSUES: {boomtownObj.issues_url}
+                    <br></br>
+                    MEMBERS: {boomtownObj.members_url}
+                    <br></br>
+                    PUBLIC MEMBERS: {boomtownObj.public_members_url}</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Connect</h3>
+                    <p class="card-text">Blog: {boomtownObj.blog}
+                    <br></br>
+                    Github: {boomtownObj.html_url}
+                    <br></br>
+                    Email: {boomtownObj.email}
+                    <br></br>
+                    Twitter: {boomtownObj.twitter_username}
+                    <br></br>
+                    Verified: {boomtownObj.is_verified}</p>
                     {/* above is problem, data not showing */}
                 </div>
                 <p class="card-text text-muted">Created at: {boomtownObj.created_at}</p>
