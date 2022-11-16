@@ -12,7 +12,6 @@ function Issues() {
             .then(data => setIssues(data))
     }, []);
 
-
     return (
         <div>
             <h1 className="error-page">Issues</h1>

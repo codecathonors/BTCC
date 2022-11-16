@@ -1,16 +1,13 @@
 import React from "react";
 
 function SingleEvent( { event }) {
-    console.log(event.public)
-    
 
     return (
         <div>
-            <h1>single event page</h1>
-            <div class="card w-75">
-                <p>event: {event.type}</p>
-                <p>id: {event.id}</p>
-                <div class="card w-50">
+            <div class="card w-75 mx-auto">
+                <h2>{event.type}</h2>
+                <h6 class="card-subtitle mb-2 text-muted">id: {event.id}</h6>
+                <div class="card w-50 mx-auto">
                     <h4>Actor</h4>
                     <img class="card-img-top" src={event.actor.avatar_url} alt="Various avatars" style={{ height: 100, width: 100 }}></img>
                     <p>ID: {event.actor.id}</p>
@@ -20,7 +17,7 @@ function SingleEvent( { event }) {
                     <p>URL: {event.actor.url}</p>
                 </div>
                 <br></br>
-                <div class="card w-50">
+                <div class="card w-50 mx-auto">
                     <h4>Repo</h4>
                     <p>ID: {event.repo.id}</p>
                     <p>Name: {event.repo.name}</p>
@@ -29,7 +26,7 @@ function SingleEvent( { event }) {
                     <p>created: {event.created_at}</p>
                 </div>
                 <br></br>
-                <div class="card w-50">
+                <div class="card w-50 mx-auto">
                     <h4>Payload</h4>
                     <p>Action: {event.payload.action}</p>
                     <p>Push ID: {event.payload.push_id}</p>
@@ -44,7 +41,8 @@ function SingleEvent( { event }) {
                     </div>
                     {/* //come back to commits, very nested */}
                 </div>
-                <div class="card w-50">
+                <br></br>
+                <div class="card w-50 mx-auto">
                     <h4>Organization</h4>
                     <p>ID: {event.org.id}</p>
                     <img class="card-img-top" src={event.org.avatar_url} alt="Boomtown blue logo" style={{ height: 100, width: 100 }}></img>
@@ -52,6 +50,7 @@ function SingleEvent( { event }) {
                     <p>Gravatar ID: {event.org.gravatar_id}</p>
                     <p>URL: {event.org.url}</p>
                 </div>
+                <br></br>
             </div>
         </div>
     )

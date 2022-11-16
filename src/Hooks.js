@@ -13,9 +13,6 @@ function Hooks() {
             .then(data => setHooks(data))
     }, []);
 
-
-
-
     return (
         <div>
             <h1 className="error-page">Hooks</h1>

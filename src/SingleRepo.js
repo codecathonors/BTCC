@@ -2,15 +2,10 @@ import React from "react";
 
 function SingleRepo( { repo }) {
 
-
-    // const singleEvent = events.map((event) => (
-    //     <SingleEvent event={event} />
-    // ))
-
     return (
         <div class="card">
-            <h1>{repo.name} | {repo.full_name}</h1>
-            <div class="card-body">
+            <h1>Repo Name: {repo.name} ({repo.full_name})</h1>
+            <div class="card w-75 mx-auto">
                 <h3>{repo.owner.login}</h3>
                 <img class="card-img-top" src={repo.owner.avatar_url} alt="Boomtown's blue logo" style={{ height: 100, width: 100 }}></img>
                 <h6>{repo.owner.url} | {repo.owner.html_url}</h6>
@@ -28,7 +23,8 @@ function SingleRepo( { repo }) {
                 <p class="card-subtitle mb-2 text-muted">Node ID: {repo.owner.node_id}</p>
                 <p class="card-subtitle mb-2 text-muted">Gravatar ID: {repo.owner.gravatar_id}</p>
             </div>
-            <div class="card">
+            <br></br>
+            <div class="card w-75 mx-auto">
                 <p>Homepage: {repo.homepage}
                 <br></br>
                 Size: {repo.size}
@@ -72,7 +68,8 @@ function SingleRepo( { repo }) {
                 {/* License: {repo.license} LICENSE IS AN OBJECT!!!*/}
                 <br></br></p>
             </div>
-            <div class="card">
+            <br></br>
+            <div class="card w-75 mx-auto">
                 <h4>URLs</h4>
                 <h6>Git URL: {repo.git_url}</h6>
                 <h6>SSH URL: {repo.ssh_url}</h6>
@@ -118,14 +115,16 @@ function SingleRepo( { repo }) {
                 <p class="card-subtitle mb-2 text-muted">Updated: {repo.updated_at}</p>
                 <p class="card-subtitle mb-2 text-muted">Pushed: {repo.pushed_at}</p>
             </div>
-            <div class="card">
-                <h1>Permissions</h1>
+            <br></br>
+            <div class="card w-25 mx-auto">
+                <h4>Permissions</h4>
                 <p>Admin: {String(repo.permissions.admin)}</p>
                 <p>Maintain: {String(repo.permissions.maintain)}</p>
                 <p>Push: {String(repo.permissions.push)}</p>
                 <p>Triage: {String(repo.permissions.false)}</p>
                 <p>Pull: {String(repo.permissions.pull)}</p>
             </div>
+            <br></br>
         </div>
     )
 

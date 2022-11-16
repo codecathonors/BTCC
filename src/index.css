@@ -14,6 +14,14 @@ code {
     monospace;
 }
 
+h1 {
+  color: darkblue;
+}
+
+p {
+  font-weight: 600;
+}
+
 .error-page {
   text-align: center;
 }

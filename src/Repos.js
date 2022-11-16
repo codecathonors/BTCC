@@ -9,21 +9,20 @@ function Repos() {
             .then(res => res.json())
             .then(data => setRepos(data))
     }, []);
-    console.log(repos)
-
+    // console.log(repos)
 
     const singleRepo = repos.map((repo) => (
-        <SingleRepo repo={repo}/>
+        <div>
+            <SingleRepo repo={repo}/>
+            <br></br>
+        </div>
     ))
 
-    
     return (
         <div>
             {singleRepo}
         </div>
     )
-
-
 }
 
 export default Repos

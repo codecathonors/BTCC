@@ -7,17 +7,7 @@ import Hooks from './Hooks';
 import Issues from './Issues';
 import Navbar from './Navbar';
 
-
 function App() {
-  // const [boomtownObj, setBoomtownObj] = useState({})
-
-  // useEffect(() => {
-  // fetch('https://api.github.com/orgs/BoomTownROI')
-  //   .then (res => res.json())
-  //   .then (data => setBoomtownObj(data))
-  // }, []);
-
-  // console.log(boomtownObj)
 
   return (
     <BrowserRouter>
@@ -44,7 +34,6 @@ function App() {
             <Issues />
           </Route>
       </Switch>
-
     </div>
     </BrowserRouter>
   );

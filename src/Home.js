@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 function Home() {
-
     const [boomtownObj, setBoomtownObj] = useState({})
+    const [repos, setRepos] = useState([])
+
+    useEffect(() => {
+        fetch('https://api.github.com/orgs/BoomTownROI/repos')
+            .then(res => res.json())
+            .then(data => setRepos(data))
+    }, []);
 
     useEffect(() => {
         fetch('https://api.github.com/orgs/BoomTownROI')
@@ -15,16 +21,18 @@ function Home() {
         if (boomtownObj.created_at <= boomtownObj.updated_at) {
             return true
         } else if (boomtownObj.created_at > boomtownObj.updated_at) {
-            alert("Updated at date cannot be before created at date.")
+            return false
         }
     }
-
-    //on top level, verify that "public_repos" count matches repository array returned from following /repos
-    //maybe count items in repo array with .length, and do a conditional to see
-    //if boomtownObj.public_repos === /repos.length
-    //wonder if i should make that repos state here and pass down
-    //return true, if not return false
-
+    
+    //verify that public_repos is equal to length of /repos
+    function repoVerification() {
+        if (boomtownObj.public_repos === repos.length) {
+            return true
+        } else {
+            return false
+        }
+    }
 
 return (
     <div>
@@ -32,8 +40,8 @@ return (
             <div class="card-body">
                 <div>
                     <img class="card-img-top" src={boomtownObj.avatar_url} alt="Boomtown's blue logo" style={{ height: 100, width: 100 }}></img>
-                    
                 </div>
+                <br></br>
                 <div class="card">
                     <p class="card-text">
                         <h1 class="card-title">{boomtownObj.name}</h1>
@@ -65,6 +73,7 @@ return (
                     </p>
                     {/* above is problem, data not showing */}
                 </div>
+                <br></br>
                 <div class="card">
                     <h3>Github API Links</h3>
                     <p class="card-text">{boomtownObj.url}
@@ -81,7 +90,7 @@ return (
                     <br></br>
                     PUBLIC MEMBERS: {boomtownObj.public_members_url}</p>
                 </div>
-                
+                <br></br>
                 <div class="card">
                     <h3>Connect</h3>
                     <p class="card-text">Blog: {boomtownObj.blog}
@@ -92,12 +101,14 @@ return (
                     <br></br>
                     Twitter: {boomtownObj.twitter_username}
                     <br></br>
-                    Verified: {boomtownObj.is_verified}</p>
+                    Verified: {String(boomtownObj.is_verified)}</p>
                     {/* above is problem, data not showing */}
                 </div>
+                <br></br>
                 <p class="card-text text-muted">Created at: {boomtownObj.created_at}</p>
                 <p class="card-text text-muted">Updated at: {boomtownObj.updated_at}</p>
                 <p class="card-text text-muted">Verification that updated date is later than created date: {String(dateVerification())}</p>
+                <p class="card-text text-muted">Verification that public repo amount matches the repo length on /repos: {String(repoVerification())}</p>
             </div>
         </div>
     </div>

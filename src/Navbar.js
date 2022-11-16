@@ -2,7 +2,6 @@ import React from "react";
 
 function Navbar() {
   
-
     return (
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand " href="/">BoomTown Github Data</a>
@@ -25,9 +24,8 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-        </nav>)
-
-
+        </nav>
+    )
 }
 
 export default Navbar

@@ -10,35 +10,18 @@ function Events() {
             .then(data => setEvents(data))
     }, []);
 
-
-    console.log(events[0])
-
-    // function eventLoop() {
-    //     for (let i = 0; i <= events.length; i++) {
-    //         return "hey"
-    //     }
-    // }
-
-    // eventLoop()
-
-    // events.forEach(event => {
-    //     for (let key in event) {
-    //         console.log(`${key}: ${event[key]}`)
-    //     }
-    // })
     const singleEvent = events.map((event) => (
+        <div>
         <SingleEvent event={event}/>
+        <br></br>
+        </div>
     ))
-
-  
 
     return (
         <div>
             {singleEvent}
         </div>
     )
-
-
 }
 
 export default Events
