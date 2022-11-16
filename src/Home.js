@@ -13,17 +13,11 @@ function Home() {
     //verify that updated_at value is later than create_at value
     function dateVerification() {
         if (boomtownObj.created_at <= boomtownObj.updated_at) {
-            console.log("this is correct")
+            return true
         } else if (boomtownObj.created_at > boomtownObj.updated_at) {
             alert("Updated at date cannot be before created at date.")
         }
     }
-    console.log(boomtownObj.created_at)
-    console.log(boomtownObj.updated_at)
-
-    // dateVerification()
-    // console.log(boomtownObj)
-
 
     //on top level, verify that "public_repos" count matches repository array returned from following /repos
     //maybe count items in repo array with .length, and do a conditional to see
@@ -103,7 +97,7 @@ return (
                 </div>
                 <p class="card-text text-muted">Created at: {boomtownObj.created_at}</p>
                 <p class="card-text text-muted">Updated at: {boomtownObj.updated_at}</p>
-                <p class="card-text text-muted">Verification that updated date is later than created date: {dateVerification()}</p>
+                <p class="card-text text-muted">Verification that updated date is later than created date: {String(dateVerification())}</p>
             </div>
         </div>
     </div>

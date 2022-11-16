@@ -1,7 +1,8 @@
 import React from "react";
 
 function SingleEvent( { event }) {
-    // console.log(event)
+    console.log(event.public)
+    
 
     return (
         <div>
@@ -24,7 +25,7 @@ function SingleEvent( { event }) {
                     <p>ID: {event.repo.id}</p>
                     <p>Name: {event.repo.name}</p>
                     <p>URL: {event.repo.url}</p>
-                    <p>public: {event.public}</p>
+                    <p>public: {String(event.public)}</p>
                     <p>created: {event.created_at}</p>
                 </div>
                 <br></br>

@@ -3,13 +3,9 @@ import React from "react";
 function SingleRepo( { repo }) {
 
 
-
-
     // const singleEvent = events.map((event) => (
     //     <SingleEvent event={event} />
     // ))
-
-
 
     return (
         <div class="card">
@@ -55,23 +51,23 @@ function SingleRepo( { repo }) {
                 <br></br>
                 Mirror: {repo.mirror_url}
                 <br></br>
-                Has Issues: {repo.has_issues}
+                Has Issues: {String(repo.has_issues)}
                 <br></br>
-                Has Projects: {repo.has_projects}
+                Has Projects: {String(repo.has_projects)}
                 <br></br>
-                Has Downloads: {repo.has_downloads}
+                Has Downloads: {String(repo.has_downloads)}
                 <br></br>
-                Has Wiki: {repo.has_wiki}
+                Has Wiki: {String(repo.has_wiki)}
                 <br></br>
-                Has Pages: {repo.has_pages}
+                Has Pages: {String(repo.has_pages)}
                 <br></br>
-                Has Discussions: {repo.has_discussions}
+                Has Discussions: {String(repo.has_discussions)}
                 <br></br>
-                Allow Forking: {repo.allow_forking}
+                Allow Forking: {String(repo.allow_forking)}
                 <br></br>
-                Archived: {repo.archived}
+                Archived: {String(repo.archived)}
                 <br></br>
-                Disabled: {repo.disabled}
+                Disabled: {String(repo.disabled)}
                 <br></br>
                 {/* License: {repo.license} LICENSE IS AN OBJECT!!!*/}
                 <br></br></p>
@@ -124,11 +120,11 @@ function SingleRepo( { repo }) {
             </div>
             <div class="card">
                 <h1>Permissions</h1>
-                <p>Admin: {repo.permissions.admin}</p>
-                <p>Maintain: {repo.permissions.maintain}</p>
-                <p>Push: {repo.permissions.push}</p>
-                <p>Triage: {repo.permissions.false}</p>
-                <p>Pull: {repo.permissions.pull}</p>
+                <p>Admin: {String(repo.permissions.admin)}</p>
+                <p>Maintain: {String(repo.permissions.maintain)}</p>
+                <p>Push: {String(repo.permissions.push)}</p>
+                <p>Triage: {String(repo.permissions.false)}</p>
+                <p>Pull: {String(repo.permissions.pull)}</p>
             </div>
         </div>
     )

@@ -9,17 +9,14 @@ function Repos() {
             .then(res => res.json())
             .then(data => setRepos(data))
     }, []);
-
-    
-
-    //need to say for each repo, map through and render on a single repo card
-
     console.log(repos)
 
 
     const singleRepo = repos.map((repo) => (
         <SingleRepo repo={repo}/>
     ))
+
+    
     return (
         <div>
             {singleRepo}
