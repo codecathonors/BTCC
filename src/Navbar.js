@@ -22,6 +22,12 @@ function Navbar() {
                     <li class="nav-item">
                         <a class="nav-link text-decoration-none" href="/hooks">Hooks</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" href="/members">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" href="/public_members">Public Members</a>
+                    </li>
                 </ul>
             </div>
         </nav>
