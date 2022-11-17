@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SingleEvent from "./SingleEvent";
 
 function Events() {
     const [events, setEvents] = useState([])
@@ -12,13 +11,13 @@ function Events() {
 
     const singleEvent = events.map((event) => (
         <div>
-            <SingleEvent event={event}/>
-            <br></br>
+            {`ID: ${event.id} | ${event.type}`}
+            
         </div>
     ))
 
     return (
-        <div class="card">
+        <div class="card w-75 mx-auto">
             {singleEvent}
         </div>
     )

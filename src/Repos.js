@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SingleRepo from "./SingleRepo";
 
 function Repos() {
     const [repos, setRepos] = useState([])
@@ -13,13 +12,12 @@ function Repos() {
   
     const singleRepo = repos.map((repo) => (
         <div>
-            <SingleRepo repo={repo}/>
-            <br></br>
+            {`ID: ${repo.id} => ${repo.name} `}
         </div>
     ))
 
     return (
-        <div class="card">
+        <div class="card w-75 mx-auto">
             {singleRepo}
         </div>
     )

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SinglePublicMember from "./SinglePublicMember";
+
 
 function PublicMembers() {
     const [publicMembers, setPublicMembers] = useState([])
@@ -16,12 +16,12 @@ function PublicMembers() {
 
     const singlePublicMember = publicMembers.map((publicMember) => (
         <div>
-            <SinglePublicMember publicMember={publicMember} />
+            {`ID: ${publicMember.id} | User: ${publicMember.login}`}
         </div>
     ))
 
     return (
-        <div class="card">
+        <div class="card w-75 mx-auto">
             {singlePublicMember}
         </div>
     )

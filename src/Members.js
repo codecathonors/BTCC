@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SingleMember from "./SingleMember";
 
 function Members() {
     const [members, setMembers] = useState([])
@@ -15,12 +14,12 @@ function Members() {
 
     const singleMember = members.map((member) => (
         <div>
-            <SingleMember member={member}/>
+            {`ID: ${member.id} | User: ${member.login}`}
         </div>
     ))
 
     return (
-        <div class="card">
+        <div class="card w-75 mx-auto">
             {singleMember}
         </div>
     )
