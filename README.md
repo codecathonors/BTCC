@@ -1,10 +1,10 @@
-## Steps
+## Process
 1. Create components needed (Events, Repos, Issues, etc.)
 2. Set up routing / Navbar
-3. Created state for components and fetched data
-  - Created conditional for fetched data returning non-200 status code
-4. Displayed Data ("ID" key/value pairs) within JSX
-5. Wrote 2 functions in Home component to validate
+3. Create state for components and fetch data 
+4. Create conditional / error for invalid data
+5. Display data ("ID" key/value pairs) within JSX
+6. Validations
   - updated_at date is later than created_at date
   - public_repo value matches /repo length
 
