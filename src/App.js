@@ -6,6 +6,8 @@ import Events from './Events';
 import Hooks from './Hooks';
 import Issues from './Issues';
 import Navbar from './Navbar';
+import Members from './Members';
+import PublicMembers from './PublicMembers';
 
 function App() {
 
@@ -32,6 +34,14 @@ function App() {
           <Route exact path="/issues">
             <Navbar />
             <Issues />
+          </Route>
+          <Route exact path="/members">
+            <Navbar />
+            <Members />
+          </Route>
+          <Route exact path="/public_members">
+            <Navbar />
+            <PublicMembers />
           </Route>
       </Switch>
     </div>

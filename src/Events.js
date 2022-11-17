@@ -12,13 +12,13 @@ function Events() {
 
     const singleEvent = events.map((event) => (
         <div>
-        <SingleEvent event={event}/>
-        <br></br>
+            <SingleEvent event={event}/>
+            <br></br>
         </div>
     ))
 
     return (
-        <div>
+        <div class="card">
             {singleEvent}
         </div>
     )
