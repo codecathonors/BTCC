@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 
 function PublicMembers() {
     const [publicMembers, setPublicMembers] = useState([])
-    // console.log(publicMembers)
-
-
+    
     useEffect(() => {
         fetch('https://api.github.com/orgs/BoomTownROI/public_members')
             .then(res => res.json())
@@ -13,20 +11,18 @@ function PublicMembers() {
     }, []);
 
   
-
     const singlePublicMember = publicMembers.map((publicMember) => (
-        <div>
-            {`ID: ${publicMember.id} | User: ${publicMember.login}`}
-        </div>
+        <ul>
+            <li>{`ID: ${publicMember.id} | User: ${publicMember.login}`}</li>
+        </ul>
     ))
 
     return (
-        <div class="card w-75 mx-auto">
+        <div class="card w-75 mx-auto" style={{ padding: 30 }}>
+            <h5 class="card-title" style={{ fontSize: 30, padding: 10, color: "darkblue" }}>Public Members</h5>
             {singlePublicMember}
         </div>
-    )
-
-
+    );
 }
 
 export default PublicMembers

@@ -10,21 +10,18 @@ function Members() {
             .then(data => setMembers(data))
     }, []);
 
-    
-
     const singleMember = members.map((member) => (
-        <div>
-            {`ID: ${member.id} | User: ${member.login}`}
-        </div>
+        <ul>
+            <li>{`ID: ${member.id} | User: ${member.login}`}</li>
+        </ul>
     ))
 
     return (
-        <div class="card w-75 mx-auto">
+        <div class="card w-75 mx-auto" style={{ padding: 30 }}>
+            <h5 class="card-title" style={{ fontSize: 30, padding: 10, color: "darkblue" }}>Members</h5>
             {singleMember}
         </div>
-    )
-
-
+    );
 }
 
 export default Members

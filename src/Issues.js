@@ -13,12 +13,10 @@ function Issues() {
     }, []);
 
     return (
-        <div>
-            <h1 className="error-page">Issues</h1>
+        <div class="card w-75 mx-auto" style={{ padding: 30 }}>
+            <h5 class="card-title" style={{ fontSize: 30, padding: 10, color: "darkblue" }}>Issues</h5>
         </div>
-    )
-
-
+    );
 }
 
 export default Issues

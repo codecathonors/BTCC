@@ -3,10 +3,10 @@ import React from "react";
 function Navbar() {
   
     return (
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand " href="/">BoomTown Github Data</a>
+        <nav class="navbar navbar-expand-md bg-light" style={{ marginBottom: 25, fontSize: 20 }}>
+            <a class="navbar-brand " href="/">BoomTown API Data</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills" >
                     <li class="nav-item active">
                         <a class="nav-link text-decoration-none" href="/">Home</a>
                     </li>
@@ -31,7 +31,7 @@ function Navbar() {
                 </ul>
             </div>
         </nav>
-    )
+    );
 }
 
 export default Navbar

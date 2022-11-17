@@ -10,17 +10,17 @@ function Events() {
     }, []);
 
     const singleEvent = events.map((event) => (
-        <div>
-            {`ID: ${event.id} | ${event.type}`}
-            
-        </div>
+        <ul>
+            <li>{`ID: ${event.id} | Event: ${event.type}`}</li>
+        </ul>
     ))
 
     return (
-        <div class="card w-75 mx-auto">
+        <div class="card w-75 mx-auto" style={{ padding: 30 }}>
+            <h5 class="card-title" style={{ fontSize: 30, padding: 10, color: "darkblue" }}>Events</h5>
             {singleEvent}
         </div>
-    )
+    );
 }
 
 export default Events
