@@ -11,7 +11,7 @@ function Events() {
 
     const singleEvent = events.map((event) => (
         <ul>
-            <li>{`ID: ${event.id} | Event: ${event.type}`}</li>
+            <li>{`ID: ${event.id} | Event: ${event.type} | Created At: ${event.created_at}`}</li>
         </ul>
     ))
 

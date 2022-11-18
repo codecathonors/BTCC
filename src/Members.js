@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 function Members() {
     const [members, setMembers] = useState([])
-    // console.log(members)
     
     useEffect(() => {
         fetch('https://api.github.com/orgs/BoomTownROI/members')

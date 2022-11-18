@@ -13,16 +13,16 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
-      <Switch>
-        <Route exact path="/">
-          <Navbar />
-          <Home />
-        </Route>
-        <Route exact path="/repos">
-          <Navbar />
-          <Repos />
-        </Route>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Navbar />
+            <Home />
+          </Route>
+          <Route exact path="/repos">
+            <Navbar />
+            <Repos />
+          </Route>
           <Route exact path="/events">
             <Navbar />
             <Events />
@@ -43,8 +43,8 @@ function App() {
             <Navbar />
             <PublicMembers />
           </Route>
-      </Switch>
-    </div>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }

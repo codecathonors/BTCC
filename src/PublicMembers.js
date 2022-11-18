@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 function PublicMembers() {
     const [publicMembers, setPublicMembers] = useState([])
     
@@ -10,7 +9,6 @@ function PublicMembers() {
             .then(data => setPublicMembers(data))
     }, []);
 
-  
     const singlePublicMember = publicMembers.map((publicMember) => (
         <ul>
             <li>{`ID: ${publicMember.id} | User: ${publicMember.login}`}</li>
